@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rafly - Okul Kütüphane Yönetim Sistemi | Dijital Kütüphane Uygulaması</title>
-<meta name="description" content="Rafly ile okul kütüphanenizi dijitalleştirin. Barkod ile kitap ekleme, öğrenci takibi, ödünç verme, rezervasyon ve daha fazlası. Ücretsiz okul kütüphane uygulaması.">
-<meta name="keywords" content="okul kütüphane uygulaması, kütüphane yönetim sistemi, dijital kütüphane, kitap takip uygulaması, okul kitap yönetimi, barkod kitap tarama, öğrenci kütüphane sistemi, kütüphane otomasyonu, ücretsiz kütüphane programı">
+<meta name="description" content="Rafly ile okul kütüphanenizde kitap envanteri, öğrenci kayıtları, ödünç ve rezervasyon işlemlerini yönetin.">
+<meta name="keywords" content="Rafly, okul kütüphanesi, kitap envanteri, ödünç işlemleri, öğrenci takibi, rezervasyon">
 <meta name="author" content="Rafly">
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/png" href="logo.png">
@@ -31,15 +31,7 @@
   "operatingSystem": "Android",
   "applicationCategory": "EducationalApplication",
   "description": "Okul kütüphanelerini dijital ortama taşıyan modern kütüphane yönetim sistemi.",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "TRY"
-  },
-  "author": {
-    "@type": "Organization",
-    "name": "Rafly"
-  }
+  "author": {"@type": "Person", "name": "Rafly geliştiricisi"}
 }
 </script>
 
@@ -536,6 +528,34 @@ footer{background:#041024!important;border-top:1px solid #285389}
 @media(prefers-reduced-motion:reduce){.phone,.floating-label,.feature-card{transition:none}}
 
 </style>
+<style id="rafly-v2-editorial">
+/* Rafly V2 editorial layout — presentation only, existing actions and IDs retained */
+.features,.roles{background:#f4f7fc!important;color:#102440!important;padding:100px 5% 110px!important}
+.features .section-header h2,.roles .section-header h2{color:#102440!important;font-size:clamp(34px,4vw,56px)!important;letter-spacing:-.045em}
+.features .section-header h2 em,.roles .section-header h2 em{color:#2a5b9c;font-family:Georgia,serif;font-weight:500}
+.features .section-header p,.roles .section-header p{color:#54647b!important}
+.features .section-tag,.roles .section-tag{color:#244a7b!important;background:#e7eef8!important;border:1px solid #ccd9e9!important}
+.features-grid{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:12px!important;perspective:1200px;margin-top:62px}
+.features-grid .feature-card{grid-column:span 2;min-height:260px!important;padding:28px!important;background:linear-gradient(160deg,#fff,#e8eef8)!important;border:1px solid #d5e0ef!important;border-radius:24px!important;box-shadow:0 22px 40px #17365d15!important;transform:rotate(-2deg);transition:transform .3s,box-shadow .3s!important}
+.features-grid .feature-card:nth-child(even){transform:rotate(2deg) translateY(16px)}
+.features-grid .feature-card:first-child{grid-column:span 3;background:linear-gradient(145deg,#173a65,#0d223f)!important;color:white!important;transform:rotate(-3deg)}
+.features-grid .feature-card:nth-child(2){grid-column:span 3}
+.features-grid .feature-card:hover{transform:translateY(-12px) rotate(0deg)!important;box-shadow:0 28px 50px #17365d30!important}
+.features-grid .feature-card h3{color:#132b49!important;font-size:20px!important}
+.features-grid .feature-card p{color:#53657a!important}
+.features-grid .feature-card:first-child h3,.features-grid .feature-card:first-child p{color:white!important}
+.features-grid .feature-card .feature-icon{background:#dce8f7!important;border-radius:15px!important}
+.roles-grid{display:grid!important;grid-template-columns:1.1fr .9fr!important;gap:28px!important;margin-top:50px!important}
+.roles .role-card{border-radius:34px!important;padding:52px!important;box-shadow:0 24px 55px #16375b1a!important;min-height:0!important}
+.roles .role-card.admin{background:linear-gradient(135deg,#1c3a61,#0b203b)!important;color:white!important;transform:translateY(-12px)}
+.roles .role-card.student{background:linear-gradient(145deg,#fff,#e5effb)!important;color:#142d4b!important;transform:translateY(25px)}
+.roles .role-card.student h3,.roles .role-card.student li{color:#142d4b!important}
+.roles .role-card.student .subtitle{color:#4c617a!important}
+.roles .role-card h3{font-size:32px!important}
+.roles .role-card li{font-size:15px!important}
+@media(max-width:900px){.features-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.features-grid .feature-card,.features-grid .feature-card:first-child,.features-grid .feature-card:nth-child(2){grid-column:span 1!important;transform:none!important;min-height:230px!important}.roles-grid{grid-template-columns:1fr!important}.roles .role-card.admin,.roles .role-card.student{transform:none!important}}
+@media(max-width:560px){.features,.roles{padding:75px 6%!important}.features-grid{grid-template-columns:1fr!important}.features-grid .feature-card{min-height:0!important;padding:26px!important}.roles .role-card{padding:30px!important}.roles .role-card h3{font-size:27px!important}}
+</style>
 </head>
 <body>
 
@@ -543,7 +563,7 @@ footer{background:#041024!important;border-top:1px solid #285389}
 <a href="#top" class="v2-brand"><img src="logo.png" alt="Rafly logosu"> <span>Rafly</span></a>
 <button class="mobile-toggle" aria-label="Menüyü aç veya kapat" aria-expanded="false" onclick="const m=document.querySelector('.nav-links');const open=m.classList.toggle('open');this.setAttribute('aria-expanded',String(open))"><span></span><span></span><span></span></button>
 <ul class="nav-links">
-<li><a href="#top">Ana Sayfa</a></li><li><a href="#features">Özellikler</a></li><li><a href="#how">Nasıl Çalışır?</a></li><li><a href="#roles">Çözümler</a></li>
+<li><a href="#top">Ana Sayfa</a></li><li><a href="#features">Özellikler</a></li><li><a href="#how">Nasıl Çalışır?</a></li><li><a href="#contact">İletişim</a></li><li><a href="#roles">Çözümler</a></li>
 <li class="v2-login"><details><summary>Giriş Yap <span aria-hidden="true">⌄</span></summary><div class="v2-login-menu"><a href="/ogrenci/">Öğrenci Girişi</a><a href="/panel/">Personel Girişi</a></div></details></li>
 <li><a class="v2-demo" href="https://wa.me/905350127504?text=Merhaba%2C%20okulumuz%20i%C3%A7in%20Rafly%20hakk%C4%B1nda%20bilgi%20almak%20istiyoruz." target="_blank" rel="noopener noreferrer">Demo Talep Et</a></li>
 </ul></div></nav>
@@ -713,8 +733,8 @@ footer{background:#041024!important;border-top:1px solid #285389}
   <div class="section-inner">
     <div class="section-header reveal">
       <span class="section-tag">ÖZELLİKLER</span>
-      <h2>Kütüphanenizin yeni dijital dünyası</h2>
-      <p>Tek uygulama ile kitap yonetimi, ogrenci takibi ve tum kutuphane operasyonlarinizi dijitallestirin.</p>
+      <h2>Rafly’nin Güçlü <em>Özellikleri</em></h2>
+      <p>Kitap kayıtları, öğrenci takibi, ödünç ve rezervasyon işlemleri için araçları keşfedin.</p>
     </div>
     <div class="features-grid">
       <div class="feature-card reveal">
@@ -740,7 +760,7 @@ footer{background:#041024!important;border-top:1px solid #285389}
       <div class="feature-card reveal">
         <div class="feature-icon notify">&#128276;</div>
         <h3>Bildirimler &amp; Duyurular</h3>
-        <p>Iade tarihi yaklasan ogrencilere otomatik hatirlatma. Sinif ve seviye bazli duyuru olusturup gonderme.</p>
+        <p>Sınıf bazlı duyurular oluşturun ve öğrencilerinize kütüphane bilgilendirmeleri iletin.</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon export">&#128196;</div>
@@ -757,7 +777,7 @@ footer{background:#041024!important;border-top:1px solid #285389}
     <div class="section-header reveal">
       <span class="section-tag">NASIL ÇALIŞIR</span>
       <h2>Üç adımda daha akıllı yönetim</h2>
-      <p>Kurulum dakikalar icinde tamamlanir. Hemen kullanmaya baslayin.</p>
+      <p>Okul koduyla giriş, kitap kaydı ve kütüphane işlemlerini üç adımda keşfedin.</p>
     </div>
     <div class="steps">
       <div class="step reveal">
@@ -784,8 +804,8 @@ footer{background:#041024!important;border-top:1px solid #285389}
   <div class="section-inner">
     <div class="section-header reveal">
       <span class="section-tag">KİMLER İÇİN?</span>
-      <h2>Herkes için doğru deneyim</h2>
-      <p>Yoneticiler ve ogrenciler farkli panellerle ayni sistemi kullanir.</p>
+      <h2>Her Kullanıcı İçin Özel <em>Çözümler</em></h2>
+      <p>Yetkililer ve öğrenciler için farklı ihtiyaçlara göre hazırlanmış paneller.</p>
     </div>
     <div class="roles-grid">
       <div class="role-card admin reveal">
@@ -800,7 +820,7 @@ footer{background:#041024!important;border-top:1px solid #285389}
         </ul>
       </div>
       <div class="role-card student reveal">
-        <h3>Ogrenci Paneli</h3>
+        <h3>Öğrenci Paneli</h3>
         <p class="subtitle">Ogrenciler ve ogretmenler icin</p>
         <ul>
           <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Kutuphane kitaplarini goruntuleme ve arama</li>
@@ -827,7 +847,7 @@ footer{background:#041024!important;border-top:1px solid #285389}
           Rafly'nin fiyati nedir?
           <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
         </div>
-        <div class="faq-a"><p>Rafly, okulunuzun ihtiyaclarina gore farkli paketler sunmaktadir. Ogrenci sayisi ve kullanim kapsamina gore fiyatlandirma yapilmaktadir. Detayli bilgi ve okulunuza ozel teklif icin bizimle iletisime gecin.</p></div>
+        <div class="faq-a"><p>Güncel kullanım koşulları ve fiyat bilgisi için bizimle iletişime geçebilirsiniz.</p></div>
       </div>
       <div class="faq-item reveal">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('active')">
@@ -841,7 +861,7 @@ footer{background:#041024!important;border-top:1px solid #285389}
           Verilerimiz guvenli mi?
           <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
         </div>
-        <div class="faq-a"><p>Evet. Tum veriler 256-bit SSL sifreleme ile iletilir, sifreler bcrypt ile hashlenir ve veriler Google Cloud altyapisinda guvenle saklanir.</p></div>
+        <div class="faq-a"><p>Veri güvenliği ve erişim yetkileri hakkında güncel teknik bilgi almak için bizimle iletişime geçebilirsiniz. Doğrulanmamış altyapı veya sertifika iddiasında bulunmuyoruz.</p></div>
       </div>
       <div class="faq-item reveal">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('active')">
@@ -855,7 +875,7 @@ footer{background:#041024!important;border-top:1px solid #285389}
           Hangi cihazlarda calisir?
           <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
         </div>
-        <div class="faq-a"><p>Rafly su anda Android cihazlarda kullanilabilir. Android 5.0 ve uzeri tum telefonlarda ve tabletlerde sorunsuz calisir.</p></div>
+        <div class="faq-a"><p>Rafly’nin öğrenci ve yetkili web panellerine tarayıcı üzerinden erişebilirsiniz. Android uygulamasıyla ilgili güncel destek bilgisi için bizimle iletişime geçin.</p></div>
       </div>
     </div>
   </div>
@@ -865,7 +885,7 @@ footer{background:#041024!important;border-top:1px solid #285389}
 <section class="cta" id="pricing">
   <div class="cta-box reveal">
     <h2>Kütüphanenizin geleceğini birlikte tasarlayalım</h2>
-    <p>Ogrenci sayiniza ve ihtiyaclariniza gore size en uygun paketi belirleyelim. Ucretsiz demo ile Rafly'yi yakindan taniyin.</p>
+    <p>Rafly'nin mevcut özelliklerini öğrenmek ve kullanım hakkında bilgi almak için bize ulaşın.</p>
     <a href="https://wa.me/905350127504?text=Merhaba%2C%20okulumuz%20i%C3%A7in%20Rafly%20hakk%C4%B1nda%20bilgi%20almak%20istiyoruz." class="btn-white" target="_blank">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       WhatsApp'tan Teklif Alin
@@ -874,7 +894,7 @@ footer{background:#041024!important;border-top:1px solid #285389}
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer id="contact">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
