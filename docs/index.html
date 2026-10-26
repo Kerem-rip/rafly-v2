@@ -339,70 +339,82 @@ footer{background:var(--primary-dark);color:rgba(255,255,255,0.7);padding:64px 2
   .footer-bottom{flex-direction:column;gap:8px;text-align:center}
 }
 </style>
+<style id="rafly-v2-design">
+:root{--primary:#123c73;--primary-light:#245b9d;--primary-dark:#081629;--accent:#398cfa;--accent-light:#74b6ff;--gradient:linear-gradient(120deg,#e6f3ff,#398cfa)}
+html{scroll-padding-top:92px}
+.v2-nav{background:rgba(3,17,40,.91)!important;border-bottom:1px solid rgba(142,185,255,.18)!important;box-shadow:none!important}
+.v2-nav-inner{max-width:1420px;margin:auto;padding:0 5%;height:88px;display:flex;align-items:center;justify-content:space-between}
+.v2-brand{display:flex;align-items:center;gap:13px;color:white;text-decoration:none;font-size:28px;font-weight:800;letter-spacing:-.04em}
+.v2-brand img{width:42px;height:42px;object-fit:contain}
+.v2-nav .nav-links{display:flex;align-items:center;gap:clamp(12px,2vw,34px)}
+.v2-nav .nav-links>li>a{color:#e8efff;font-weight:600;font-size:14px;text-decoration:none}
+.v2-nav .nav-links>li>a:hover{color:#76b9ff}
+.v2-login{position:relative;margin-left:clamp(10px,4vw,90px)}
+.v2-login summary{list-style:none;cursor:pointer;border:1px solid rgba(238,246,255,.75);border-radius:16px;padding:12px 24px;color:white;font-size:14px;font-weight:650;white-space:nowrap}
+.v2-login summary::-webkit-details-marker{display:none}
+.v2-login-menu{position:absolute;right:0;top:calc(100% + 12px);min-width:210px;background:#0b2042;border:1px solid #42699b;border-radius:15px;padding:8px;box-shadow:0 16px 45px #0008;z-index:200}
+.v2-login-menu a{display:block;color:#fff;text-decoration:none;padding:12px 14px;border-radius:10px;font-size:14px}
+.v2-login-menu a:hover{background:#234978}
+.v2-nav .nav-links>li>a.v2-demo{background:linear-gradient(115deg,#f4f8ff,#59adff);color:#0c2754;padding:14px 22px;border-radius:16px;font-weight:750;white-space:nowrap}
+.v2-hero{min-height:760px;padding:170px 5% 135px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(2,13,31,.88),rgba(3,22,51,.63) 48%,rgba(2,15,36,.46)),linear-gradient(0deg,rgba(2,18,43,.65),transparent 50%),url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=2200&q=85') center/cover no-repeat,#071b38}
+.v2-hero:before{background:radial-gradient(circle at 35% 60%,rgba(23,109,231,.2),transparent 60%);inset:0;width:auto;height:auto;top:0;right:0;border-radius:0}
+.v2-hero:after{display:none}
+.v2-hero-inner{width:100%;max-width:1420px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:6%;position:relative;z-index:1}
+.v2-eyebrow{display:inline-block;border:1px solid rgba(86,168,255,.48);background:rgba(11,77,161,.57);color:#e7f2ff;padding:9px 17px;border-radius:40px;font-size:13px;font-weight:650;margin-bottom:28px}
+.v2-hero h1{font-size:clamp(42px,4.6vw,76px);line-height:1.13;color:white;letter-spacing:-.045em;font-weight:800;margin:0 0 25px}
+.v2-hero h1 span{color:#8dc5ff}
+.v2-hero-copy>p{font-size:clamp(16px,1.35vw,20px);line-height:1.7;color:#e0e9f7;max-width:670px;margin-bottom:38px}
+.v2-hero .hero-actions{gap:14px}
+.v2-hero .btn{padding:17px 25px;border-radius:17px;font-size:15px;box-shadow:none}
+.v2-primary{background:linear-gradient(110deg,#f5f9ff,#95caff);color:#0b2855}
+.v2-secondary{background:rgba(4,17,40,.4);border:1px solid #c3d8f5;color:white;backdrop-filter:blur(12px)}
+.v2-primary:hover,.v2-secondary:hover{transform:translateY(-3px);filter:brightness(1.1)}
+.v2-feature-panel{display:grid;grid-template-columns:1fr 1fr;background:linear-gradient(135deg,rgba(20,43,77,.86),rgba(9,28,59,.93));border:1px solid rgba(93,162,255,.68);border-radius:28px;box-shadow:0 25px 90px #0009,0 0 40px #1164c422;backdrop-filter:blur(22px);padding:26px}
+.v2-feature{min-height:162px;padding:18px 22px;color:white;text-decoration:none;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;transition:background .2s}
+.v2-feature:nth-child(odd){border-right:1px solid #ffffff17}
+.v2-feature:nth-child(-n+2){border-bottom:1px solid #ffffff17}
+.v2-feature:hover{background:#398cfa24}
+.v2-feature-icon{display:grid;place-items:center;background:linear-gradient(140deg,#1765c4,#103e7a);border:1px solid #439dff8c;border-radius:13px;width:49px;height:49px;color:white;font-size:25px;margin-bottom:12px}
+.v2-feature strong{font-size:17px;line-height:1.4}
+.v2-feature small{font-size:13px;color:#b9cde8;line-height:1.5;margin-top:4px}
+.v2-scroll{position:absolute;bottom:82px;left:50%;transform:translateX(-50%);z-index:2;width:43px;height:43px;border-radius:50%;border:1px solid #72b9ff;background:#145aa4a8;color:white;text-align:center;line-height:41px;font-size:24px;text-decoration:none}
+.v2-trust-strip{position:relative;z-index:3;margin:-54px 2% 0;padding:0;background:linear-gradient(115deg,#153965,#0b2857);border:1px solid #4195f3;border-radius:25px;box-shadow:0 18px 45px #071d4b4a}
+.v2-trust-inner{max-width:1400px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);padding:30px 12px}
+.v2-trust-inner>div{display:grid;grid-template-columns:52px 1fr;column-gap:12px;align-content:center;padding:14px 18px;color:white}
+.v2-trust-inner>div:not(:last-child){border-right:1px solid #ffffff26}
+.v2-trust-inner span{grid-row:span 2;background:#1555a2;border-radius:50%;width:48px;height:48px;display:grid;place-items:center;font-size:25px}
+.v2-trust-inner strong{font-size:17px;align-self:end}
+.v2-trust-inner small{color:#c3d6f3;font-size:12px;align-self:start}
+@media(max-width:1050px){.v2-hero-inner{grid-template-columns:1fr;gap:45px}.v2-hero{padding-top:150px}.v2-feature-panel{max-width:780px}.v2-nav .nav-links{gap:12px}.v2-login{margin-left:0}.v2-nav .nav-links>li>a{font-size:12px}.v2-trust-inner{grid-template-columns:repeat(2,1fr)}.v2-trust-inner>div:nth-child(2){border-right:0}}
+@media(max-width:768px){.v2-nav-inner{height:72px}.v2-nav .mobile-toggle{display:block}.v2-nav .mobile-toggle span{background:white}.v2-nav .nav-links{display:none;position:absolute;top:72px;left:0;right:0;padding:18px 6% 24px;background:#081b38;flex-direction:column;align-items:stretch;gap:14px;border-bottom:1px solid #3566a0}.v2-nav .nav-links.open{display:flex}.v2-login-menu{position:static;margin-top:8px}.v2-login summary{text-align:center}.v2-nav .nav-links>li>a.v2-demo{display:block;text-align:center}.v2-hero{min-height:unset;padding:140px 6% 100px}.v2-hero h1{font-size:clamp(35px,8vw,52px)}.v2-hero .hero-actions{flex-direction:column;align-items:stretch}.v2-hero .btn{justify-content:center}.v2-feature-panel{padding:12px;border-radius:20px}.v2-feature{min-height:150px;padding:13px}.v2-feature strong{font-size:14px}.v2-feature small{font-size:12px}.v2-feature-icon{width:42px;height:42px}.v2-scroll{bottom:30px}.v2-trust-strip{margin:-25px 4% 0}.v2-trust-inner{padding:12px 4px}.v2-trust-inner>div{padding:12px 8px;grid-template-columns:36px 1fr;gap:7px}.v2-trust-inner span{width:34px;height:34px;font-size:18px}.v2-trust-inner strong{font-size:12px}.v2-trust-inner small{font-size:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="nav">
-  <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <img src="logo.png" alt="Rafly Logo">
-      Rafly
-    </a>
-    <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="#features">Ozellikler</a></li>
-      <li><a href="#how">Nasil Calisir</a></li>
-      <li><a href="#roles">Kimler Icin</a></li>
-      <li><a href="#faq">SSS</a></li>
-      <li><a href="/ogrenci/" class="nav-panel">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-        Ogrenci Girisi
-      </a></li>
-      <li><a href="/panel/" class="nav-panel">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
-        Personel Girisi
-      </a></li>
-      <li><a href="https://wa.me/905350127504?text=Merhaba%2C%20okulumuz%20i%C3%A7in%20Rafly%20hakk%C4%B1nda%20bilgi%20almak%20istiyoruz." class="nav-cta" target="_blank">Teklif Al</a></li>
-    </ul>
-  </div>
-</nav>
+<nav id="nav" class="v2-nav"><div class="v2-nav-inner">
+<a href="#top" class="v2-brand"><img src="logo.png" alt="Rafly logosu"> <span>Rafly</span></a>
+<button class="mobile-toggle" aria-label="Menüyü aç veya kapat" aria-expanded="false" onclick="const m=document.querySelector('.nav-links');const open=m.classList.toggle('open');this.setAttribute('aria-expanded',String(open))"><span></span><span></span><span></span></button>
+<ul class="nav-links">
+<li><a href="#top">Ana Sayfa</a></li><li><a href="#features">Özellikler</a></li><li><a href="#how">Nasıl Çalışır?</a></li><li><a href="#roles">Çözümler</a></li>
+<li class="v2-login"><details><summary>Giriş Yap <span aria-hidden="true">⌄</span></summary><div class="v2-login-menu"><a href="/ogrenci/">Öğrenci Girişi</a><a href="/panel/">Personel Girişi</a></div></details></li>
+<li><a class="v2-demo" href="https://wa.me/905350127504?text=Merhaba%2C%20okulumuz%20i%C3%A7in%20Rafly%20hakk%C4%B1nda%20bilgi%20almak%20istiyoruz." target="_blank" rel="noopener noreferrer">Demo Talep Et</a></li>
+</ul></div></nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div>
-      <div class="hero-badge"><span></span> Okulunuz icin hazir</div>
-      <h1>Okul kutuphanenizi <span class="highlight">dijitallestirin</span></h1>
-      <p>Kagit defterler ve karisik tablolar yerine, tek bir uygulama ile tum kutuphane islemlerinizi yonetin. Barkod tarama, ogrenci takibi, rezervasyonlar ve daha fazlasi.</p>
-      <div class="hero-actions">
-        <a href="https://wa.me/905350127504?text=Merhaba%2C%20okulumuz%20i%C3%A7in%20Rafly%20hakk%C4%B1nda%20bilgi%20almak%20istiyoruz." class="btn btn-primary" target="_blank">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Teklif Alin
-        </a>
-        <a href="#features" class="btn btn-secondary">Kesfet</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-video-wrapper">
-        <!-- VIDEO HAZIRLAYINCA: Asagidaki placeholder'i sil, iframe'in comment'ini kaldir -->
-        <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1&autoplay=0" title="Rafly Tanitim Videosu" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-        <div class="video-placeholder" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/VIDEO_ID?rel=0&autoplay=1\' title=\'Rafly Tanitim\' allow=\'accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture\' allowfullscreen style=\'position:absolute;top:0;left:0;width:100%;height:100%;border:none\'></iframe>'">
-          <div class="video-play-btn">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          </div>
-          <p>Rafly Tanitim Videosu</p>
-          <span>Izlemek icin tiklayin</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="hero v2-hero" id="top"><div class="v2-hero-inner">
+<div class="v2-hero-copy"><span class="v2-eyebrow">✦ &nbsp; Kütüphane Yönetim Sistemi</span>
+<h1>Kütüphaneler için<br><span>Daha Akıllı Bir Sistem</span></h1>
+<p>Rafly, okul kütüphanelerinde kitap yönetimini, öğrenci takibini ve ödünç işlemlerini tek bir dijital deneyimde bir araya getirir.</p>
+<div class="hero-actions"><a href="/ogrenci/" class="btn v2-primary">Öğrenci Girişi <span aria-hidden="true">→</span></a><a href="/panel/" class="btn v2-secondary">Personel Girişi <span aria-hidden="true">↗</span></a></div>
+</div><div class="v2-feature-panel" aria-label="Rafly özellikleri">
+<a href="#features" class="v2-feature"><span class="v2-feature-icon">▣</span><strong>Kaynak Yönetimi</strong><small>Kitap envanteri tek yerde</small></a>
+<a href="#features" class="v2-feature"><span class="v2-feature-icon">♙</span><strong>Öğrenci Takibi</strong><small>Öğrenci ve kullanım süreçleri</small></a>
+<a href="#features" class="v2-feature"><span class="v2-feature-icon">▥</span><strong>Raporlar & Analiz</strong><small>Kütüphane verilerine genel bakış</small></a>
+<a href="#roles" class="v2-feature"><span class="v2-feature-icon">◇</span><strong>Okullara Özel</strong><small>Eğitim kurumları için tasarlandı</small></a>
+</div></div><a class="v2-scroll" href="#showcase" aria-label="Devamını keşfet">↓</a></section>
 
 <!-- SHOWCASE (PHONE) -->
-<section class="showcase">
+<section class="showcase" id="showcase">
   <div class="showcase-inner">
     <div class="showcase-text reveal">
       <span class="section-tag">Cebinizde Kutuphane</span>
@@ -538,15 +550,12 @@ footer{background:var(--primary-dark);color:rgba(255,255,255,0.7);padding:64px 2
   </div>
 </section>
 
-<!-- STATS -->
-<section class="stats reveal">
-  <div class="stats-inner">
-    <div class="stat-item"><h3>50+</h3><p>Aktif Okul</p></div>
-    <div class="stat-item"><h3>30sn</h3><p>Kurulum Suresi</p></div>
-    <div class="stat-item"><h3>7/24</h3><p>Erisim</p></div>
-    <div class="stat-item"><h3>256bit</h3><p>SSL Sifreleme</p></div>
-  </div>
-</section>
+<section class="v2-trust-strip" aria-label="Rafly'nin sunduğu özellikler"><div class="v2-trust-inner">
+<div><span>▣</span><strong>Kitap Envanteri</strong><small>Tek merkezden yönetim</small></div>
+<div><span>⌗</span><strong>Barkod Desteği</strong><small>Hızlı kitap işlemleri</small></div>
+<div><span>♙</span><strong>Öğrenci Takibi</strong><small>Düzenli kayıt yönetimi</small></div>
+<div><span>↗</span><strong>Ödünç & İade</strong><small>İşlem takibi</small></div>
+</div></section>
 
 <!-- FEATURES -->
 <section class="features" id="features">
