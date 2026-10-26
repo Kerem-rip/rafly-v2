@@ -470,6 +470,71 @@ footer{background:#041024!important;border-top:1px solid #285389}
 @media(max-width:900px){.showcase-inner{gap:50px;grid-template-columns:1fr}.showcase-text{text-align:center}.showcase-text>p{margin-left:auto;margin-right:auto}.showcase-list{max-width:520px;margin:auto;text-align:left}.phone-stage{padding:20px 0}.features-grid{grid-template-columns:repeat(2,1fr)}.roles-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.showcase,.features,.how,.roles,.faq{padding:85px 6%}.showcase-text h2{font-size:37px}.showcase-text>p{font-size:16px}.phone{transform:none;width:290px}.phone:hover{transform:translateY(-4px)}.features-grid,.steps,.roles-grid{grid-template-columns:1fr}.feature-card{padding:28px}.steps:before{display:none}.step{padding:15px}.role-card{padding:30px}.faq-q{font-size:14px;padding:18px}.cta{padding:70px 6% 100px}.cta-box{padding:52px 25px}.v2-trust-inner>div{min-width:0}}
 
+
+<style id="rafly-v2-signature">
+
+/* V2 / SIGNATURE EXPERIENCE — intentionally scoped to marketing page */
+.showcase{isolation:isolate;min-height:940px;display:flex;align-items:center;background:radial-gradient(ellipse 65% 60% at 80% 52%,#103d7d 0%,transparent 65%),linear-gradient(145deg,#06152b 0%,#0a2752 60%,#071932 100%)}
+.showcase-inner{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(40px,7vw,110px)}
+.showcase-text{position:relative}
+.showcase-text:before{content:"01 / THE EXPERIENCE";display:block;color:#66adfa;font-size:12px;letter-spacing:.24em;font-weight:800;margin-bottom:26px}
+.showcase-text h2{font-size:clamp(44px,4.9vw,75px);max-width:650px;line-height:1.05;margin:22px 0 26px}
+.showcase-text h2:after{content:"";display:block;width:96px;height:5px;margin-top:28px;border-radius:9px;background:linear-gradient(90deg,#64b8ff,#286bff)}
+.showcase-text>p{max-width:550px;color:#c0d4ed}
+.showcase-list{gap:22px;margin-top:34px}
+.showcase-action{display:inline-flex;align-items:center;gap:24px;margin-top:42px;text-decoration:none;color:#e8f4ff;font-weight:750;border:1px solid #6ca9f480;background:#12447f80;border-radius:16px;padding:16px 23px;transition:transform .2s,background .2s}
+.showcase-action:hover{transform:translateY(-3px);background:#2067b5}
+.phone-stage{min-height:800px;display:flex;align-items:center;justify-content:center;isolation:isolate}
+.phone-stage:before{width:min(650px,90vw);height:min(650px,90vw);background:radial-gradient(circle,#2176e65e 0%,#1d5ba226 36%,transparent 70%);filter:blur(4px)}
+.phone-ambient{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;z-index:0}
+.orbit{position:absolute;width:540px;height:540px;border:1px solid rgba(100,180,255,.18);border-radius:50%;box-shadow:inset 0 0 60px #2376dd10}
+.orbit-two{width:650px;height:650px;border-style:dashed;border-color:#8fcaff25}
+.orbit-three{width:760px;height:760px;border-color:#69b4ff0c}
+.phone{width:322px;height:695px;border-radius:52px;padding:11px;background:linear-gradient(145deg,#5e93c7,#071b38 19%,#091324 82%,#3c83ca);border:1px solid #85bbf3;box-shadow:22px 36px 90px #000c,-12px -14px 45px #4099fa26,0 0 0 7px #73b7ff0a;transform:rotate(-5deg) translateY(-6px);transition:transform .4s;z-index:2}
+.phone:before{background:#061326}
+.phone:hover{transform:rotate(-1deg) translateY(-14px)}
+.phone-screen{border-radius:42px}
+.floating-label{position:absolute;z-index:3;display:flex;gap:13px;align-items:center;padding:13px 18px;border:1px solid #7ab8ff70;border-radius:18px;background:linear-gradient(125deg,#164983e8,#08234bdb);box-shadow:0 18px 48px #0007;backdrop-filter:blur(20px);color:#fff;min-width:198px;pointer-events:none}
+.floating-label-top{right:-10px;top:130px;transform:rotate(4deg)}
+.floating-label-bottom{left:-15px;bottom:115px;transform:rotate(-5deg)}
+.floating-glyph{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:#2878d9;font-size:23px}
+.floating-label b{display:block;font-size:14px}
+.floating-label small{display:block;color:#b9d5f4;font-size:12px}
+/* Consistent editorial layout and more breathing room across lower sections */
+.features,.how,.roles,.faq{position:relative;isolation:isolate}
+.features:after,.how:after,.roles:after{content:"";position:absolute;bottom:0;left:5%;right:5%;height:1px;background:linear-gradient(90deg,transparent,#397bc1,transparent)}
+.features .section-header:before,.how .section-header:before,.roles .section-header:before,.faq .section-header:before{display:block;color:#6db5ff;font-size:12px;font-weight:800;letter-spacing:.24em;margin-bottom:25px}
+.features .section-header:before{content:"02 / CAPABILITIES"}
+.how .section-header:before{content:"03 / HOW IT WORKS"}
+.roles .section-header:before{content:"04 / YOUR WORKSPACE"}
+.faq .section-header:before{content:"05 / SUPPORT"}
+.features .section-header h2,.how .section-header h2,.roles .section-header h2,.faq .section-header h2{max-width:800px;margin:0 auto 20px;font-size:clamp(36px,4.3vw,62px);line-height:1.1}
+.features-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.feature-card{min-height:260px;display:flex;flex-direction:column;justify-content:flex-start;padding:38px;background:linear-gradient(145deg,#133864,#092245);border-color:#4282c466}
+.feature-card:before{height:2px;background:linear-gradient(90deg,transparent,#62b6ff,transparent);opacity:.7}
+.feature-card .feature-icon{font-size:27px}
+.feature-card h3{font-size:21px;letter-spacing:-.015em}
+.feature-card p{font-size:15px;line-height:1.8}
+.steps{gap:24px}
+.step{background:linear-gradient(160deg,#153c72,#0b2750);border:1px solid #4b89cd66;border-radius:23px;padding:40px 25px 42px;box-shadow:0 20px 45px #0002}
+.steps:before{display:none}
+.step-number{margin-bottom:30px}
+.roles-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.role-card{min-height:450px}
+.role-card:before{content:"";position:absolute;right:-60px;top:-80px;width:250px;height:250px;background:radial-gradient(circle,#308fff36,transparent 70%);pointer-events:none}
+.role-card li{margin-bottom:2px}
+.faq-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:1150px;align-items:start}
+.faq-item{min-width:0}
+.faq-item.active .faq-a{max-height:400px}
+.cta-box{max-width:1200px}
+.footer-top{gap:40px}
+.footer-brand p{max-width:340px}
+@media(max-width:1100px){.phone-stage{min-height:740px}.orbit{width:440px;height:440px}.orbit-two{width:550px;height:550px}.orbit-three{width:640px;height:640px}.floating-label-top{right:-10px}.floating-label-bottom{left:-10px}.showcase-inner{gap:35px}.phone{width:300px;height:680px}.features-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.showcase{min-height:0}.showcase-inner{grid-template-columns:1fr}.showcase-text:before{text-align:center}.showcase-text h2{margin-left:auto;margin-right:auto}.showcase-text h2:after{margin-left:auto;margin-right:auto}.showcase-action{margin-top:35px}.phone-stage{min-height:780px}.floating-label-top{right:8%}.floating-label-bottom{left:8%}.faq-list{grid-template-columns:1fr}.roles-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.showcase{padding-top:90px;padding-bottom:80px}.showcase-text h2{font-size:clamp(38px,10vw,50px)}.showcase-text:before{font-size:10px}.showcase-list li{font-size:14px}.phone-stage{min-height:720px;margin:0 -5%}.phone{width:280px;height:660px;transform:rotate(-2deg)}.orbit{width:310px;height:310px}.orbit-two{width:400px;height:400px}.orbit-three{width:490px;height:490px}.floating-label{min-width:0;padding:9px 11px;gap:8px}.floating-label-top{right:0;top:100px}.floating-label-bottom{left:0;bottom:95px}.floating-glyph{width:31px;height:31px;font-size:17px}.floating-label b{font-size:11px}.floating-label small{font-size:10px}.features-grid{grid-template-columns:1fr}.feature-card{min-height:0;padding:28px}.features .section-header h2,.how .section-header h2,.roles .section-header h2,.faq .section-header h2{font-size:35px}.role-card{min-height:0}.faq-list{gap:12px}}
+@media(max-width:370px){.phone{width:266px}.floating-label-top{right:-5px}.floating-label-bottom{left:-5px}}
+@media(prefers-reduced-motion:reduce){.phone,.floating-label,.feature-card{transition:none}}
+
 </style>
 </head>
 <body>
@@ -501,14 +566,18 @@ footer{background:#041024!important;border-top:1px solid #285389}
     <div class="showcase-text reveal">
       <span class="section-tag">CEBİNİZDEKİ KÜTÜPHANE</span>
       <h2>Kütüphaneniz, her an elinizin altında</h2>
-      <p>Rafly'nin sade ve hizli mobil arayuzu ile kitap arama, odunc verme ve rezervasyon islemlerini saniyeler icinde yapin.</p>
+      <p>Kitaplar, öğrenciler ve ödünç işlemleri tek bir deneyimde. Aşağıdaki telefon ekranını keşfederek Rafly’nin tanıtım akışını deneyimleyin.</p>
       <ul class="showcase-list">
-        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Kitaplari aninda arayin ve durumunu gorun</li>
-        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Barkod tarayarak hizlica odunc verin</li>
-        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Iade tarihlerini ve gecmisi takip edin</li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Kitapları tek yerden görüntüleyin ve yönetin</li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Barkod ve manuel kitap ekleme seçenekleri</li>
+        <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Ödünç, iade ve işlem geçmişini takip edin</li>
       </ul>
+      <a class="showcase-action" href="/panel/">Personel paneline geç <span aria-hidden="true">↗</span></a>
     </div>
     <div class="phone-stage reveal">
+      <div class="phone-ambient" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit orbit-three"></span></div>
+      <div class="floating-label floating-label-top" aria-hidden="true"><span class="floating-glyph">▦</span><span><b>Kitap yönetimi</b><small>Tek bir ekranda</small></span></div>
+      <div class="floating-label floating-label-bottom" aria-hidden="true"><span class="floating-glyph">↗</span><span><b>Ödünç ve iade</b><small>Kolay işlem takibi</small></span></div>
       <div class="phone">
         <div class="phone-screen">
           <div class="app">
