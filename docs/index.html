@@ -388,6 +388,88 @@ html{scroll-padding-top:92px}
 @media(max-width:1050px){.v2-hero-inner{grid-template-columns:1fr;gap:45px}.v2-hero{padding-top:150px}.v2-feature-panel{max-width:780px}.v2-nav .nav-links{gap:12px}.v2-login{margin-left:0}.v2-nav .nav-links>li>a{font-size:12px}.v2-trust-inner{grid-template-columns:repeat(2,1fr)}.v2-trust-inner>div:nth-child(2){border-right:0}}
 @media(max-width:768px){.v2-nav-inner{height:72px}.v2-nav .mobile-toggle{display:block}.v2-nav .mobile-toggle span{background:white}.v2-nav .nav-links{display:none;position:absolute;top:72px;left:0;right:0;padding:18px 6% 24px;background:#081b38;flex-direction:column;align-items:stretch;gap:14px;border-bottom:1px solid #3566a0}.v2-nav .nav-links.open{display:flex}.v2-login-menu{position:static;margin-top:8px}.v2-login summary{text-align:center}.v2-nav .nav-links>li>a.v2-demo{display:block;text-align:center}.v2-hero{min-height:unset;padding:140px 6% 100px}.v2-hero h1{font-size:clamp(35px,8vw,52px)}.v2-hero .hero-actions{flex-direction:column;align-items:stretch}.v2-hero .btn{justify-content:center}.v2-feature-panel{padding:12px;border-radius:20px}.v2-feature{min-height:150px;padding:13px}.v2-feature strong{font-size:14px}.v2-feature small{font-size:12px}.v2-feature-icon{width:42px;height:42px}.v2-scroll{bottom:30px}.v2-trust-strip{margin:-25px 4% 0}.v2-trust-inner{padding:12px 4px}.v2-trust-inner>div{padding:12px 8px;grid-template-columns:36px 1fr;gap:7px}.v2-trust-inner span{width:34px;height:34px;font-size:18px}.v2-trust-inner strong{font-size:12px}.v2-trust-inner small{font-size:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+<style id="rafly-v2-complete">
+
+/* V2 COMPLETE VISUAL SYSTEM — landing page only; simulator interactions retained */
+body{background:#06152c;color:#f4f8ff}
+.v2-nav{background:rgba(5,17,39,.96)!important}
+.v2-hero{background:linear-gradient(90deg,rgba(2,13,31,.76),rgba(3,22,51,.40) 48%,rgba(2,15,36,.25)),linear-gradient(0deg,rgba(2,18,43,.5),transparent 48%),url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=2200&q=85') center/cover no-repeat,#071b38}
+.v2-hero h1{font-size:clamp(42px,4.5vw,72px)}
+.v2-feature-panel{background:linear-gradient(145deg,rgba(17,41,76,.89),rgba(8,29,65,.9));border-color:#5c9fe5;border-radius:24px}
+.v2-feature{min-height:164px}
+.v2-trust-strip{background:linear-gradient(110deg,#102e5b,#092550 60%,#0d3c7a)}
+/* Phone showcase: midnight backdrop + blue halo; phone remains fully interactive */
+.showcase{background:radial-gradient(ellipse 44% 44% at 78% 50%,rgba(29,113,224,.22),transparent),linear-gradient(160deg,#081d3e,#07162e 70%,#0a2855);padding:150px 5% 135px;overflow:hidden}
+.showcase:before{background:linear-gradient(90deg,transparent,rgba(84,163,255,.08),transparent);height:1px;bottom:auto}
+.showcase-inner{max-width:1350px;gap:90px;grid-template-columns:1fr 1fr}
+.showcase-text .section-tag,.section-tag{background:rgba(26,95,192,.27);color:#a9d5ff;border:1px solid rgba(92,168,255,.37);padding:9px 17px;letter-spacing:.04em}
+.showcase-text h2{font-size:clamp(35px,4.3vw,59px);color:#fff;line-height:1.12;letter-spacing:-.04em;max-width:620px}
+.showcase-text>p{font-size:18px;color:#b9cce6;max-width:540px;line-height:1.85}
+.showcase-list{gap:20px}
+.showcase-list li{color:#e4efff;font-size:16px;align-items:center}
+.showcase-list li svg{color:#66b5ff;background:#144781;border-radius:50%;padding:3px;width:27px;height:27px}
+.phone-stage:before{width:600px;height:600px;background:radial-gradient(circle,rgba(33,116,240,.33),transparent 67%)}
+.phone{border:2px solid #6a98c7;background:#071329;box-shadow:0 42px 100px #000b,0 0 70px #1775ef33;transform:rotate(-3deg);width:304px}
+.phone:hover{transform:rotate(0) translateY(-6px)}
+/* Preserve existing interactive demo controls and their click handlers */
+.phone .app{color:#172b47}
+.phone .app .qa-card,.phone .app .mth-card,.phone .app .school-card,.phone .app .a-book,.phone .app .a-stu,.phone .app .rz-rec{box-shadow:0 2px 10px #152d4b0b}
+.phone .app .qa-ic,.phone .app .mth-ic{background:#e5f0ff;color:#1c63b5}
+/* Feature cards */
+.features{background:linear-gradient(180deg,#07162e,#0a2044);padding:135px 5%}
+.features:before{background:radial-gradient(ellipse at 50% 10%,rgba(30,105,210,.11),transparent 60%)}
+.section-inner{max-width:1350px}
+.section-header{margin-bottom:58px}
+.section-header h2{font-size:clamp(32px,4vw,54px);color:#f7faff;letter-spacing:-.035em}
+.section-header p{color:#aec4df;font-size:17px;max-width:700px}
+.features-grid{gap:20px}
+.feature-card{background:linear-gradient(145deg,#102e56,#0a2145);border:1px solid rgba(101,159,227,.28);border-radius:22px;padding:35px;box-shadow:0 15px 45px #0002}
+.feature-card:hover{background:linear-gradient(145deg,#174076,#0c2b59);border-color:#4b97e5;box-shadow:0 18px 45px #0005}
+.feature-card h3{color:#f5f9ff;font-size:20px}
+.feature-card p{color:#b7cce5;font-size:15px}
+.feature-icon{width:58px;height:58px;background:#1855a0!important;border:1px solid #438be8;border-radius:16px;box-shadow:0 8px 24px #0c60d733}
+/* Process */
+.how{background:linear-gradient(180deg,#0a2044,#0b2b57);border:0;padding:135px 5%}
+.steps{gap:25px}
+.steps:before{top:41px;background:linear-gradient(90deg,transparent,#438de2,transparent)}
+.step{padding:12px 20px 20px}
+.step-number{background:linear-gradient(145deg,#2b93ff,#1354a8);border:1px solid #77bdff;box-shadow:0 12px 35px #126be04d}
+.step h3{color:white;font-size:21px}
+.step p{color:#bbd0e9;font-size:15px;line-height:1.8}
+/* Roles */
+.roles{background:linear-gradient(180deg,#0b2b57,#071b38);padding:135px 5%}
+.roles-grid{gap:24px}
+.role-card{border:1px solid #4585ca77;border-radius:24px;padding:50px;background:linear-gradient(140deg,#123b71,#0b2851)!important;color:#f5f9ff!important;box-shadow:0 25px 60px #0003}
+.role-card.student{background:linear-gradient(140deg,#12335f,#092143)!important}
+.role-card h3{font-size:26px}
+.role-card .subtitle{color:#c4d7ef;opacity:1}
+.role-card li{color:#e1edfc;font-size:15px}
+.role-card.student li svg{color:#79bcff}
+/* FAQ */
+.faq{background:linear-gradient(180deg,#071b38,#06152c);border-top:1px solid #244e7e;padding:130px 5%}
+.faq-list{max-width:890px;gap:14px}
+.faq-item{background:#102b51;border:1px solid #37679a;border-radius:16px}
+.faq-item.active{border-color:#73b9ff;box-shadow:0 10px 30px #0004}
+.faq-q{color:#f0f6ff;font-size:16px;padding:23px 25px}
+.faq-a p{color:#bed0e6;font-size:15px}
+/* CTA */
+.cta{background:#06152c;padding:100px 5% 145px}
+.cta-box{max-width:1100px;background:radial-gradient(circle at 80% 20%,#216dc5 0%,transparent 50%),linear-gradient(135deg,#133c78,#0b2b59);border:1px solid #4a9bf2;border-radius:28px;padding:80px 50px;box-shadow:0 25px 90px #0005}
+.cta-box h2{color:#fff;font-size:clamp(29px,4vw,46px);letter-spacing:-.03em}
+.cta-box p{color:#d6e7fb}
+.cta-box .btn-white{background:#eaf5ff;color:#0c3167}
+/* Footer */
+footer{background:#041024!important;border-top:1px solid #285389}
+.footer-inner{max-width:1350px}
+.footer-brand h3,.footer-col h4{color:#fff}
+.footer-brand p,.footer-col a,.footer-bottom{color:#a9bfdc}
+.footer-col a:hover{color:#79c2ff}
+/* Anchor clarity */
+.v2-nav .nav-links a:focus-visible,.v2-hero a:focus-visible,.qa-card:focus-visible,.faq-q:focus-visible{outline:3px solid #8dc5ff;outline-offset:4px}
+@media(max-width:900px){.showcase-inner{gap:50px;grid-template-columns:1fr}.showcase-text{text-align:center}.showcase-text>p{margin-left:auto;margin-right:auto}.showcase-list{max-width:520px;margin:auto;text-align:left}.phone-stage{padding:20px 0}.features-grid{grid-template-columns:repeat(2,1fr)}.roles-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.showcase,.features,.how,.roles,.faq{padding:85px 6%}.showcase-text h2{font-size:37px}.showcase-text>p{font-size:16px}.phone{transform:none;width:290px}.phone:hover{transform:translateY(-4px)}.features-grid,.steps,.roles-grid{grid-template-columns:1fr}.feature-card{padding:28px}.steps:before{display:none}.step{padding:15px}.role-card{padding:30px}.faq-q{font-size:14px;padding:18px}.cta{padding:70px 6% 100px}.cta-box{padding:52px 25px}.v2-trust-inner>div{min-width:0}}
+
 </style>
 </head>
 <body>
@@ -417,8 +499,8 @@ html{scroll-padding-top:92px}
 <section class="showcase" id="showcase">
   <div class="showcase-inner">
     <div class="showcase-text reveal">
-      <span class="section-tag">Cebinizde Kutuphane</span>
-      <h2>Tum kutuphane elinizin altinda</h2>
+      <span class="section-tag">CEBİNİZDEKİ KÜTÜPHANE</span>
+      <h2>Kütüphaneniz, her an elinizin altında</h2>
       <p>Rafly'nin sade ve hizli mobil arayuzu ile kitap arama, odunc verme ve rezervasyon islemlerini saniyeler icinde yapin.</p>
       <ul class="showcase-list">
         <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Kitaplari aninda arayin ve durumunu gorun</li>
@@ -561,8 +643,8 @@ html{scroll-padding-top:92px}
 <section class="features" id="features">
   <div class="section-inner">
     <div class="section-header reveal">
-      <span class="section-tag">Ozellikler</span>
-      <h2>Kutuphaneniz icin ihtiyaciniz olan her sey</h2>
+      <span class="section-tag">ÖZELLİKLER</span>
+      <h2>Kütüphanenizin yeni dijital dünyası</h2>
       <p>Tek uygulama ile kitap yonetimi, ogrenci takibi ve tum kutuphane operasyonlarinizi dijitallestirin.</p>
     </div>
     <div class="features-grid">
@@ -604,8 +686,8 @@ html{scroll-padding-top:92px}
 <section class="how" id="how">
   <div class="section-inner">
     <div class="section-header reveal">
-      <span class="section-tag">Nasil Calisir</span>
-      <h2>3 adimda kutuphane yonetimi</h2>
+      <span class="section-tag">NASIL ÇALIŞIR</span>
+      <h2>Üç adımda daha akıllı yönetim</h2>
       <p>Kurulum dakikalar icinde tamamlanir. Hemen kullanmaya baslayin.</p>
     </div>
     <div class="steps">
@@ -632,8 +714,8 @@ html{scroll-padding-top:92px}
 <section class="roles" id="roles">
   <div class="section-inner">
     <div class="section-header reveal">
-      <span class="section-tag">Kimler Icin</span>
-      <h2>Herkes icin ayri deneyim</h2>
+      <span class="section-tag">KİMLER İÇİN?</span>
+      <h2>Herkes için doğru deneyim</h2>
       <p>Yoneticiler ve ogrenciler farkli panellerle ayni sistemi kullanir.</p>
     </div>
     <div class="roles-grid">
@@ -667,8 +749,8 @@ html{scroll-padding-top:92px}
 <section class="faq" id="faq">
   <div class="section-inner">
     <div class="section-header reveal">
-      <span class="section-tag">Sikca Sorulan Sorular</span>
-      <h2>Merak edilenler</h2>
+      <span class="section-tag">MERAK ETTİKLERİNİZ</span>
+      <h2>Sıkça sorulan sorular</h2>
     </div>
     <div class="faq-list">
       <div class="faq-item reveal">
@@ -713,7 +795,7 @@ html{scroll-padding-top:92px}
 <!-- PRICING -->
 <section class="cta" id="pricing">
   <div class="cta-box reveal">
-    <h2>Okulunuza ozel fiyat teklifi alin</h2>
+    <h2>Kütüphanenizin geleceğini birlikte tasarlayalım</h2>
     <p>Ogrenci sayiniza ve ihtiyaclariniza gore size en uygun paketi belirleyelim. Ucretsiz demo ile Rafly'yi yakindan taniyin.</p>
     <a href="https://wa.me/905350127504?text=Merhaba%2C%20okulumuz%20i%C3%A7in%20Rafly%20hakk%C4%B1nda%20bilgi%20almak%20istiyoruz." class="btn-white" target="_blank">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
