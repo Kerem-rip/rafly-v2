@@ -556,6 +556,26 @@ footer{background:#041024!important;border-top:1px solid #285389}
 @media(max-width:900px){.features-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.features-grid .feature-card,.features-grid .feature-card:first-child,.features-grid .feature-card:nth-child(2){grid-column:span 1!important;transform:none!important;min-height:230px!important}.roles-grid{grid-template-columns:1fr!important}.roles .role-card.admin,.roles .role-card.student{transform:none!important}}
 @media(max-width:560px){.features,.roles{padding:75px 6%!important}.features-grid{grid-template-columns:1fr!important}.features-grid .feature-card{min-height:0!important;padding:26px!important}.roles .role-card{padding:30px!important}.roles .role-card h3{font-size:27px!important}}
 </style>
+<style id="rafly-v2-visual-hero">
+/* Approved Rafly concept: photographic-feeling hero and real clickable phone interface */
+.v2-hero{min-height:790px!important;position:relative!important;overflow:hidden!important;background:linear-gradient(90deg,rgba(5,19,36,.95) 0%,rgba(8,29,48,.82) 43%,rgba(15,39,52,.28) 100%),url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=2000&q=85') center/cover!important}
+.v2-hero:after{content:"";position:absolute;inset:auto 0 0;height:125px;background:linear-gradient(0deg,#0a1c33,transparent);pointer-events:none}
+.v2-hero-inner{position:relative!important;z-index:2!important;max-width:1330px!important;min-height:750px!important;display:grid!important;grid-template-columns:1.08fr .92fr!important;align-items:center!important;gap:48px!important}
+.v2-hero-copy{max-width:660px!important}
+.v2-hero-copy h1{font-size:clamp(40px,4.65vw,69px)!important;line-height:1.07!important;letter-spacing:-.045em!important;text-align:left!important}
+.v2-hero-copy h1 span{color:#6bb4ff!important}
+.v2-hero-copy p{max-width:510px!important;color:#e3edf8!important;font-size:17px!important}
+.v2-hero .hero-actions{justify-content:flex-start!important}
+.rafly-hero-scene{min-height:620px;position:relative;display:flex;align-items:center;justify-content:center}
+.rafly-hero-phone{width:285px;height:550px;border:8px solid #071323;border-radius:43px;transform:rotate(8deg);background:#06172b;box-shadow:24px 40px 70px #000b,0 0 0 2px #7d8fa4;overflow:hidden;position:relative;z-index:2}
+.rafly-hero-phone-top{position:absolute;top:8px;left:50%;transform:translateX(-50%);height:20px;width:90px;border-radius:20px;background:#02060d;z-index:3}
+.rafly-hero-phone-screen{height:100%;padding:48px 16px 18px;color:white;background:linear-gradient(145deg,#0b284b,#06152a);font-size:13px}
+.rh-brand{text-align:center;color:#6bbfff;font-size:17px;font-weight:800;margin-bottom:30px}.rh-welcome{line-height:1.5;font-size:15px;margin-bottom:20px}.rh-search{padding:13px;border-radius:12px;background:#1a3558;color:#afc6df;font-size:11px}
+.rh-app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0}.rh-app-grid a{background:#16395e;color:#e9f4ff;text-decoration:none;border-radius:12px;padding:15px 4px;text-align:center;font-size:25px}.rh-app-grid small{display:block;font-size:10px;margin-top:5px}.rh-reading{display:grid;gap:10px;background:#173452;border-radius:13px;padding:20px 14px;margin-top:18px}.rh-reading small{color:#a7c4e6}.rh-app-bottom{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#8fbae5;font-size:21px}
+.rh-books{position:absolute;right:0;bottom:30px;width:240px;height:120px;z-index:1;transform:rotate(-4deg)}.rh-books span{display:block;height:36px;background:linear-gradient(#e3cba9,#d8b48b);border:6px solid #243951;border-radius:5px;margin:4px 0;box-shadow:8px 10px 20px #0006}
+@media(max-width:900px){.v2-hero-inner{grid-template-columns:1fr!important;gap:0!important;padding-top:130px!important}.v2-hero-copy h1{text-align:center!important}.v2-hero-copy{text-align:center!important;margin:auto}.v2-hero .hero-actions{justify-content:center!important}.rafly-hero-scene{min-height:570px}.v2-hero{background-position:55% center!important}}
+@media(max-width:520px){.v2-hero-inner{padding-top:105px!important}.v2-hero-copy h1{font-size:39px!important}.v2-hero-copy p{font-size:15px!important}.rafly-hero-scene{min-height:520px}.rafly-hero-phone{transform:rotate(5deg) scale(.84)}.rh-books{right:-30px}}
+</style>
 </head>
 <body>
 
@@ -569,16 +589,15 @@ footer{background:#041024!important;border-top:1px solid #285389}
 </ul></div></nav>
 
 <section class="hero v2-hero" id="top"><div class="v2-hero-inner">
-<div class="v2-hero-copy"><span class="v2-eyebrow">✦ &nbsp; Kütüphane Yönetim Sistemi</span>
-<h1>Kütüphaneler için<br><span>Daha Akıllı Bir Sistem</span></h1>
-<p>Rafly, okul kütüphanelerinde kitap yönetimini, öğrenci takibini ve ödünç işlemlerini tek bir dijital deneyimde bir araya getirir.</p>
-<div class="hero-actions"><a href="/ogrenci/" class="btn v2-primary">Öğrenci Girişi <span aria-hidden="true">→</span></a><a href="/panel/" class="btn v2-secondary">Personel Girişi <span aria-hidden="true">↗</span></a></div>
-</div><div class="v2-feature-panel" aria-label="Rafly özellikleri">
-<a href="#features" class="v2-feature"><span class="v2-feature-icon">▣</span><strong>Kaynak Yönetimi</strong><small>Kitap envanteri tek yerde</small></a>
-<a href="#features" class="v2-feature"><span class="v2-feature-icon">♙</span><strong>Öğrenci Takibi</strong><small>Öğrenci ve kullanım süreçleri</small></a>
-<a href="#features" class="v2-feature"><span class="v2-feature-icon">▥</span><strong>Raporlar & Analiz</strong><small>Kütüphane verilerine genel bakış</small></a>
-<a href="#roles" class="v2-feature"><span class="v2-feature-icon">◇</span><strong>Okullara Özel</strong><small>Eğitim kurumları için tasarlandı</small></a>
-</div></div><a class="v2-scroll" href="#showcase" aria-label="Devamını keşfet">↓</a></section>
+<div class="v2-hero-copy"><span class="v2-eyebrow">▣ &nbsp; Kütüphane Yönetim Sistemi</span>
+<h1>Kütüphaneler İçin<br>Daha <span>Akıllı,</span> Daha<br><span>Verimli</span> Bir Sistem</h1>
+<p>Rafly, okul kütüphanelerinde kitap kayıtlarını, öğrenci takibini, ödünç ve rezervasyon işlemlerini bir araya getirir.</p>
+<div class="hero-actions"><a href="/ogrenci/" class="btn v2-primary">Öğrenci Girişi <span aria-hidden="true">→</span></a><a href="/panel/" class="btn v2-secondary">Yetkili Girişi <span aria-hidden="true">↗</span></a></div>
+</div>
+<div class="rafly-hero-scene" aria-label="Rafly öğrenci paneli temsili telefon önizlemesi">
+<div class="rafly-hero-phone"><div class="rafly-hero-phone-top"></div><div class="rafly-hero-phone-screen"><div class="rh-brand">▣ Rafly</div><div class="rh-welcome">Merhaba,<br><strong>Öğrenmeye Devam Et!</strong></div><div class="rh-search">⌕ &nbsp; Kitap veya yazar ara...</div><div class="rh-app-grid"><a href="/ogrenci/">▤<small>Kitap Ara</small></a><a href="/ogrenci/">▢<small>Rezervasyon</small></a><a href="/ogrenci/">♧<small>Duyurular</small></a></div><div class="rh-reading"><small>Kütüphanenizi keşfedin</small><strong>Kitaplarınızı tek yerden takip edin.</strong></div><div class="rh-app-bottom">⌂ &nbsp; &nbsp; ⌕ &nbsp; &nbsp; ▤ &nbsp; &nbsp; ♙</div></div></div>
+<div class="rh-books" aria-hidden="true"><span></span><span></span><span></span></div></div>
+</div><a class="v2-scroll" href="#features" aria-label="Özelliklere git">↓</a></section>
 
 <!-- SHOWCASE (PHONE) -->
 <section class="showcase" id="showcase">
