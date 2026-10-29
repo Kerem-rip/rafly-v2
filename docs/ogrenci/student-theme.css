@@ -63,3 +63,16 @@ button:focus-visible,a:focus-visible{outline:3px solid #4e9aff;outline-offset:4p
 @media(max-width:1100px) and (min-width:880px){#home-body{grid-template-columns:1fr}#home-body>.stats{grid-row:2;grid-column:1;flex-direction:row}.hero-cover{height:230px}.quick-section{grid-template-columns:1fr}#bk-list{grid-template-columns:1fr}}
 @media(max-width:879px){.active-book{gap:12px;padding:20px}.hero-cover{height:170px;width:30%}.active-book .book-title{font-size:23px}.rz{gap:14px;padding:16px}.history-cover{width:70px;height:105px}.rz .nm{font-size:18px}.rz .top{flex-wrap:wrap}.rz .badge{font-size:10px}.prof-head{padding:24px 14px}.prof-name{font-size:26px}.info-row{font-size:13px}.bottom-nav{padding-bottom:env(safe-area-inset-bottom);height:calc(66px + env(safe-area-inset-bottom))}.scroll-area{padding-bottom:100px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* Continuous catalogue: one list on desktop and phone browsers. */
+#bk-list{display:block;margin:0 40px 40px;padding:0!important;background:white;border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 28px #163d7009;overflow:hidden}
+.books-header .search-wrap{margin-bottom:28px}.books-header .sh-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:0}
+#bk-total{font-size:14px;color:var(--text-secondary);white-space:nowrap}
+.book-columns{display:flex;justify-content:space-between;padding:16px 28px;border-bottom:1px solid var(--border);font-size:14px}
+#bk-list .book-row{border:0;border-bottom:1px solid var(--border);border-radius:0;box-shadow:none;margin:0;padding:18px 28px;gap:24px;background:white}
+#bk-list .cover-art{width:58px;height:80px;border-radius:5px}
+#bk-list .book-info .t{font-family:Georgia,'Times New Roman',serif;font-size:22px;white-space:normal;overflow:visible;line-height:1.35}
+#bk-list .book-info .a,#bk-list .book-info .p{display:inline;font-size:14px;line-height:1.7}
+#bk-list .book-info .a + .p:before{content:' • ';padding:0 8px;color:#9caabd}
+#bk-status{text-align:center;color:var(--text-secondary);font-size:13px;padding:18px}#bk-status:empty{padding:0}#bk-sentinel{height:1px}
+@media(max-width:879px){#bk-list{margin:0 16px 90px}.books-header .sh-top{align-items:flex-start;flex-direction:column;gap:8px}.books-header .search-wrap{margin-bottom:20px}.book-columns{padding:12px 16px}#bk-list .book-row{padding:16px;gap:14px}#bk-list .cover-art{width:45px;height:64px}#bk-list .book-info .t{font-size:17px}#bk-list .book-info .a,#bk-list .book-info .p{display:block;font-size:12px}#bk-list .book-info .a + .p:before{content:none}#bk-list .book-avail{min-width:45px;padding:8px}.books-header .sh-title{font-size:30px}}
