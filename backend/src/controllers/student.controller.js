@@ -1460,6 +1460,7 @@ const getMyReservations = async (req, res, next) => {
         r.*,
         b.book_name,
         b.book_writer,
+        b.cover_url,
         b.publisher,
         b.isbn
       FROM ${schemaName}.reservations r
