@@ -43,7 +43,10 @@ export async function getSchoolBooks(schoolCode: string, search?: string) {
     `/api/schools/${encodeURIComponent(schoolCode)}/books`,
     { params: { ...(search ? { search } : {}), limit: 10000 } }
   );
-  return data.data ?? [];
+  if (!data?.success || !Array.isArray(data.data)) {
+    throw new Error(data?.message || "Kitap listesi alınamadı.");
+  }
+  return data.data;
 }
 
 export interface AddBookToSchoolPayload {
