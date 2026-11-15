@@ -4,6 +4,7 @@ import { useAuthStore } from "@/store/authStore";
 import { getStudents } from "@/api/students";
 import { getSchoolBooks } from "@/api/books";
 import { getReservations } from "@/api/reservations";
+import { Button } from "@/components/Button";
 import { PageHeader } from "@/components/PageHeader";
 import { cn } from "@/lib/utils";
 
@@ -61,7 +62,7 @@ export function DashboardPage() {
     enabled: !!schoolCode,
   });
 
-  const { data: books, isLoading: booksLoading } = useQuery({
+  const { data: books, isLoading: booksLoading, isError: booksError, isFetching: booksFetching, refetch: retryBooks } = useQuery({
     queryKey: ["school-books", schoolCode],
     queryFn: () => getSchoolBooks(schoolCode),
     enabled: !!schoolCode,
@@ -90,6 +91,15 @@ export function DashboardPage() {
         description="Kütüphane genel görünümü"
       />
 
+      {booksError && (
+        <div className="card p-4 mb-4 flex items-center gap-4" role="alert">
+          <p>Kitap sayıları yüklenemedi.</p>
+          <Button variant="outline" loading={booksFetching} onClick={() => void retryBooks()}>
+            Tekrar Dene
+          </Button>
+        </div>
+      )}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         <StatCard
           label="Toplam Öğrenci"
@@ -100,7 +110,7 @@ export function DashboardPage() {
         />
         <StatCard
           label="Kitap Çeşidi"
-          value={books?.length ?? 0}
+          value={booksError || !books ? "—" : books.length}
           icon={BookOpen}
           loading={booksLoading}
           color="green"
@@ -108,11 +118,11 @@ export function DashboardPage() {
         />
         <StatCard
           label="Toplam Kitap Adedi"
-          value={totalQuantity}
+          value={booksError || !books ? "—" : totalQuantity}
           icon={Library}
           loading={booksLoading}
           color="teal"
-          hint={`${totalAvailable} müsait`}
+          hint={booksError || !books ? undefined : `${totalAvailable} müsait`}
         />
         <StatCard
           label="Bekleyen Talep"

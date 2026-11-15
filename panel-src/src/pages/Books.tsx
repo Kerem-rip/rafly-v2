@@ -35,7 +35,7 @@ export function BooksPage() {
   const [isbnSearchOpen, setIsbnSearchOpen] = useState(false);
   const [detailBook, setDetailBook] = useState<SchoolBook | null>(null);
 
-  const { data: books, isLoading } = useQuery({
+  const { data: books, isLoading, isError, isFetching, refetch } = useQuery({
     queryKey: ["school-books", schoolCode],
     queryFn: () => getSchoolBooks(schoolCode),
     enabled: !!schoolCode,
@@ -216,10 +216,13 @@ export function BooksPage() {
     <div>
       <PageHeader
         title="Kitaplar"
-        description={`Okul envanterinde ${filtered.length} kitap`}
+        description={
+          isError ? "Kitap listesi alınamadı." :
+          books ? `Okul envanterinde ${filtered.length} kitap` : "Kitaplar yükleniyor…"
+        }
         actions={
           <>
-            <Button variant="outline" onClick={handleExport}>
+            <Button variant="outline" onClick={handleExport} disabled={!filtered.length || isError}>
               <Download size={16} />
               Excel
             </Button>
@@ -246,14 +249,23 @@ export function BooksPage() {
         </div>
       </div>
 
-      <DataTable
-        columns={columns}
-        data={filtered}
-        loading={isLoading}
-        emptyText="Envanterde kitap yok"
-        getRowKey={(b) => b.book_id}
-        onRowClick={(b) => setDetailBook(b)}
-      />
+      {isError ? (
+        <div className="card p-5 flex items-center gap-4" role="alert">
+          <p>Kitaplar yüklenemedi.</p>
+          <Button variant="outline" loading={isFetching} onClick={() => void refetch()}>
+            Tekrar Dene
+          </Button>
+        </div>
+      ) : (
+        <DataTable
+          columns={columns}
+          data={filtered}
+          loading={isLoading}
+          emptyText="Envanterde kitap yok"
+          getRowKey={(b) => b.book_id}
+          onRowClick={(b) => setDetailBook(b)}
+        />
+      )}
 
       <AddBookModal
         open={isbnSearchOpen}

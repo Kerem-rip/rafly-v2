@@ -308,7 +308,7 @@ const state = {
   tab: 0,
   loginLevel: "ortaokul",
   // books
-  books: {items:[], page:1, totalPages:1, totalQuantity:0, loading:false, search:""},
+  books: {items:[], page:1, totalPages:1, totalQuantity:0, search:""},
   reservations: [],
   announcements: [],
   homeLoading: true,
@@ -720,13 +720,14 @@ function paintAnnImages(id){
 
 // ── BOOKS ──
 let bookDebounce=null;
+let bookRequest=0;
 async function renderBooks(s){
   s.innerHTML=`
     <div class="sub-header">
       <div class="sh-top"><span class="sh-title">Kitap Listesi</span></div>
       <div class="search-wrap">${I.search}<input class="input" id="bk-search" placeholder="Kitap veya yazar ara..." value="${esc(state.books.search)}"></div>
     </div>
-    <div class="list-info"><span id="bk-total">Toplam: ${state.books.totalQuantity} adet kitap</span><span id="bk-page">Sayfa ${state.books.page}/${state.books.totalPages}</span></div>
+    <div class="list-info"><span id="bk-total"></span><span id="bk-page"></span></div>
     <div class="scroll-area" style="padding:10px 16px 20px" id="bk-list"></div>`;
   const inp=$("#bk-search");
   inp.addEventListener("input",()=>{ clearTimeout(bookDebounce); bookDebounce=setTimeout(()=>{state.books.search=inp.value.trim(); fetchBooks(1);},400); });
@@ -734,18 +735,31 @@ async function renderBooks(s){
 }
 
 async function fetchBooks(page){
-  const list=$("#bk-list"); if(list) list.innerHTML=`<div class="center-loader"><div class="spinner spinner-primary"></div></div>`;
+  const list=$("#bk-list");
+  if(!list) return;
+  const request=++bookRequest;
+  $("#bk-total").textContent="";
+  $("#bk-page").textContent="";
+  list.innerHTML=`<div class="center-loader"><div class="spinner spinner-primary"></div></div>`;
   try{
     const q=encodeURIComponent(state.books.search||"");
     const r=await api(`/api/schools/${encodeURIComponent(state.schoolCode)}/books?page=${page}&limit=30&search=${q}`);
-    const d=r.data||{};
-    const items=(d.books)||d.data||[];
-    state.books.items=items;
-    state.books.page=(d.pagination&&d.pagination.page)||1;
-    state.books.totalPages=(d.pagination&&d.pagination.totalPages)||1;
-    state.books.totalQuantity=(d.summary&&d.summary.totalQuantity)||d.totalQuantity||0;
-  }catch(_){ state.books.items=[]; }
-  paintBooks();
+    if(request!==bookRequest || !list.isConnected) return;
+
+    const payload=r.data;
+    if(!r.ok || payload.success!==true || !Array.isArray(payload.data)){
+      throw new Error("Kitaplar yüklenemedi");
+    }
+    state.books.items=payload.data;
+    state.books.page=payload.pagination?.page ?? page;
+    state.books.totalPages=Math.max(1,payload.pagination?.totalPages ?? 1);
+    state.books.totalQuantity=payload.summary?.totalQuantity ?? payload.data.reduce((sum,book)=>sum+(Number(book.quantity)||0),0);
+    paintBooks();
+  }catch(_){
+    if(request!==bookRequest || !list.isConnected) return;
+    list.innerHTML=`<div class="empty" role="alert"><p>Kitaplar yüklenemedi.</p><button type="button" class="btn" id="bk-retry">Tekrar Dene</button></div>`;
+    $("#bk-retry").addEventListener("click",()=>fetchBooks(page));
+  }
 }
 
 function paintBooks(){

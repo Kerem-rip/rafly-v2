@@ -1,0 +1,33 @@
+{
+  "name": "rafly-desktop",
+  "productName": "Rafly",
+  "version": "0.1.0",
+  "description": "Rafly okul kütüphanesi yönetimi",
+  "private": true,
+  "main": "main.cjs",
+  "scripts": {
+    "prepare:site": "node scripts/prepare-site.cjs",
+    "start": "npm run prepare:site && electron .",
+    "build:win": "npm run prepare:site && electron-builder --win --x64 --publish never",
+    "build:linux": "npm run prepare:site && electron-builder --linux --dir --publish never"
+  },
+  "devDependencies": {
+    "electron": "45.3.2",
+    "electron-builder": "26.18.1"
+  },
+  "build": {
+    "appId": "online.raflylib.desktop",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.cjs",
+      "site/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "site/assets/rafly-logo.png",
+      "artifactName": "Rafly-Setup-${version}-${arch}.${ext}"
+    }
+  }
+}
